@@ -1,0 +1,65 @@
+<div class="booking-conf">
+       
+    <div class="b-head">  
+     <p>Confirm Your Booking</p>
+    </div>
+    
+    <div class="b-main">
+
+        <div class="ufinfo binfo">
+            <div class="flightname">
+                <img src="/icon/flight.png" alt="">
+               <p><%= bookinginfo.airline %></p>
+            </div>
+            <div class="userinfo">
+                <p>Trip For: <%= bookinginfo.travellername %></p>
+                <p class="btotaltravellers">Total Travellers: <%= bookinginfo.travellers %></p>
+                <p class="traveldate btotaltravellers">Travel On: <%= bookinginfo.departuredate  %> <%= bookinginfo.departuretime %></p>
+            </div>
+        </div>
+         
+        <div class="ftinfo binfo">
+            <div class="bfrom">
+                <h2>FROM</h2>
+                <p><%= bookinginfo.departurecity %></p>
+            </div>   
+             <div class="bft">
+                <img src="/img/transfer.png" alt="">
+             </div>
+            <div class="b-to">
+                <h2>TO</h2>
+                <p><%= bookinginfo.arivalcity %></p>
+            </div>
+        </div>
+
+        <div class="payinfo binfo">
+            <div class="payhead">
+                <h2>Total Payable</h2>
+            </div>
+            <div class="payable">
+                <div class="mpay pay">
+                  <p>₹<%= bookinginfo.ticketPrice %> × <%= bookinginfo.travellers %> Travellers</p>
+                  <p>₹<%= bookinginfo.bookingPrice %>/-</p>
+                </div>
+                <div class="tpay pay">
+                    <p>All Applicable Taxes</p>
+                    <p>₹<%= bookinginfo.bookingtax %>/-</p>
+                </div>
+                <div class="gtotal pay">
+                    <h2><b>Grand Total</b></h2>
+                    <h2><b>₹<%= bookinginfo.BookingFinalPrice %>/-</b></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="bconf">
+            <div class="bbtn fbtn">
+            <button class="canbtn btn">Cancel</button>
+            <form action="/api/booking" method="post">
+                <button class="cpbtn btn ">Confirm & Pay</button>
+            </form>
+            </div> 
+        </div>
+
+    </div>
+</div>

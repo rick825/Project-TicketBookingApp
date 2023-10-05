@@ -1,0 +1,82 @@
+<section id="mytrips">
+    <div class="mytrips">
+        <div class="mytriphead">
+            <h1><b>My Trips:</b></h1>
+        </div>
+
+        <!-- trips -->
+        <div class="trips">
+          
+            <% for(var i = 0; i < trips.length; i++){ %>
+            <!-- trip 1 -->
+            <div class="trip trip1">
+
+                <div class="tripinfo">
+                    <div class="tripimg tripi">
+                        <img src="/icon/trip1.png" alt="">
+                    </div>
+                    <div class="tripimg tripi">
+                        <img src="/icon/flight.png" alt="">
+                    </div>
+                    <div class="avail-company" style="margin-left: 10px;">
+                        <h2><%= trips[i].airline %></h2>
+                    </div>
+                    <div class="trip-number tripi">
+                        <p>Ticket ID: #<%= trips[i].ticketID %></p>
+                    </div>
+                    <div class="trip-for tripi">
+                        <p class="tripf"><b>Trip for:</b></p>
+                        <p class="tripn"><%= trips[i].travelername %></p>
+                    </div>
+                    <div class="trip-for tripi">
+                        <p class="tripf"><b>Travel Time:</b></p>
+                        <p class="tripn"><%= trips[i].traveltime %></p>
+                    </div>
+                </div>
+
+                <div class="booking-form form booking-info">
+                    <!-- info -->
+                    <div class="info">
+                    <div class="fsec from-city">
+                        <label for="from-city">From</label>
+                        <div name="from-city" id="city" class="city">
+                          <p><%= trips[i].departurecity %></p>
+                         </div>
+                        </div>
+                        <div class="fsec fimg">
+                            <img src="img/transfer.png" alt="">
+                        </div>
+                        <div class="fsec to-city">
+                            <label for="to">To</label>
+                            <div name="to-city" id="city" class="city">
+                             <p><%= trips[i].arivalcity %></p>   
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="fsec travel">
+                            <label for="travel">Travellers</label>
+                             <p><%= trips[i].travelers %></p>
+                        </div>
+                        <hr>
+                        <div class="fsec date">
+                            <label for="date">Travel On</label>
+                           <p><%= trips[i].departuredate %> <%= trips[i].departuretime %></p>
+                        </div>
+                        <div class="fsec fbtn">
+                            <form action="/api/seeTicket" method="post">
+                                <input type="hidden" name="tripId" value="<%= trips[i]._id %>">
+                            <button>See Ticket</button>
+                            </form>
+                        </div>
+                    <!-- end form -->
+                   </div>
+               
+            </div>    
+          </div>  
+          <!-- end trip1 -->
+          <% } %>
+        
+     </div>
+     <!-- end trips -->
+    </div>
+  </section>

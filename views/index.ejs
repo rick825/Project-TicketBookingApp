@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+</head>
+<body>
+   
+    <div class="backblack"></div>
+    <div class="navbar">
+        <img src="/icon/nav.png" alt="">
+    </div>
+    <!-- headers -->
+   <%-include('templates/_headers')%>
+    <!-- end headers -->
+
+  <!-- main -->
+  <section id="main">
+    <div class="main">
+       <!-- section top -->
+       <div class="sectop sec">
+        <p>Hello Travellers, <br>Get ready for travelling with us!!</p> 
+       </div>
+       <!-- end section top -->
+       <!-- section bottom-->
+       <div class="secbot sec">
+          <div class="booking-form form booking-info">
+           <!-- form -->
+           <form action="/">
+           <div class="fsec from-city">
+               <label for="from-city">From</label>
+               <select name="from-city" id="city">
+               <option value="Mumbai">Mumbai</option>
+               <option value="Delhi">Delhi</option>
+               <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+                </select>
+               </div>
+               <div class="fsec fimg">
+                   <img src="img/transfer.png" alt="">
+               </div>
+               <div class="fsec to-city">
+                   <label for="to">To</label>
+                   <select name="to-city" id="city">
+                       <option value="Mumbai">Mumbai</option>
+                       <option value="Delhi">Delhi</option>
+                       <option value="Chennai">Chennai</option>
+                       <option value="Kolkata">Kolkata</option>
+                     </select>
+               </div>
+               <hr>
+               <div class="fsec travel">
+                   <label for="travel">Travellers</label>
+                   <input type="number" name="travel" min="0">
+               </div>
+               <hr>
+               <div class="fsec date">
+                   <label for="date">Date</label>
+                   <input type="date" name="date">
+               </div>
+               <div class="fsec fbtn">
+                   <button>Book Now</button>
+               </div>
+           </form>
+           <!-- end form -->
+       </div>
+       </div>
+    </div>
+    <!-- end section bottom -->
+   </section>
+   <!-- end main -->
+
+
+   <!-- footer -->
+   <%-include('templates/_footer')%>
+   <!-- end footer -->
+    
+</body>
+</html>

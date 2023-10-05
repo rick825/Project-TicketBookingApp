@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Flights</title>
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    
+  
+    <div class="admin-form admin-main">
+        <h2>Hello Admin: Name</h2>
+        <p>Please enter the following Details:-</p>
+        <div class="container">
+        <form action="/api/availableFlights" method="POST">
+            <label for="airline">Airline:</label>
+            <input type="text" id="airline" name="airline" required><br><br>
+            
+            <label for="traveltime">Travel Time:</label>
+            <input type="text" id="traveltime" name="traveltime" required><br><br>
+            
+            <label for="traveldate">Travel Date:</label>
+            <input type="date" id="traveldate" name="traveldate" required><br><br>
+            
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" required><br><br>
+            
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" required><br><br>
+            
+            <label for="ticketsleft">Tickets Left:</label>
+            <input type="number" id="ticketsleft" name="ticketsleft" required><br><br>
+
+            <label for="price">Ticket Price</label>
+            <input type="number" id="price" name="price" required> <br><br>
+            
+            <label for="availableTime">Available Time (comma-separated):</label>
+            <input type="text" id="availableTime" name="availableTime" required><br><br>
+            
+            <input type="submit" value="Submit">
+                </form>
+              </div>
+       
+    </div>
+
+</body>
+</html>

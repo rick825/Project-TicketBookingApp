@@ -1,0 +1,86 @@
+<div class="available-flight">
+  <!-- trip 1 -->
+  <% for(var i =0; i < flight.length; i++){ %>
+  <div class="trip available">
+
+    <div class="tripinfo avail-info">
+        <div class="tripimg tripi">
+            <img src="/icon/flight.png" alt="">
+        </div>
+        <div class="avail-company">
+            <h2><%= flight[i].airline %></h2>
+        </div>
+        <div class="trip-for tripi">
+            <p class="tripf"><b>Travel On:</b></p>
+            <p class="tripn"><%= flight[i].traveldate %></p>
+        </div>
+        <div class="trip-for tripi">
+            <p class="tripf"><b>Travel Time:</b></p>
+            <p class="tripn"><%= flight[i].traveltime %></p>
+        </div>
+        <div class="trip-for tripi">
+            <p class="tripf"><b>Travel For:</b></p>
+            <p class="tripn"><%= author.name  %></p>
+        </div>
+        <div class="trip-for tripi travellers">
+            <p class="tripf"><b>Travellers:</b></p>
+            <p class="tripn"><%= selectedbooking.traveller %></p>
+        </div>
+    </div>
+
+    <div class="booking-form form booking-info">
+        <!-- info -->
+        <div class="info">
+        <div class="fsec from-city">
+            <label for="from-city">From</label>
+            <div name="from-city" id="city" class="city">
+              <p><%= flight[i].from %></p>
+             </div>
+            </div>
+            <div class="fsec fimg">
+                <img src="img/transfer.png" alt="">
+            </div>
+            <div class="fsec to-city">
+                <label for="to">To</label>
+                <div name="to-city" id="city" class="city">
+                 <p><%= flight[i].to %></p>   
+                </div>
+            </div>
+            <hr>
+            <form method="POST" action="/api/bookingconfirmation">
+            <div class="fsec travel available-sits">
+                <label for="travel">Tickets Left</label>
+                 <p><%= flight[i].ticketsleft %></p>
+            </div>
+            <hr>
+            <div class="fsec ">
+                <label for="date">Please Choose Time</label>
+                <div class="avil-tim">
+                    <% for(var j = 0; j < flight[i].availableTime.length; j++ ){ %>
+                    <p id="id_avail-time">
+                        <label><input type="radio" name="availtime" value="<%= flight[i].availableTime[j] %>" required><span><%= flight[i].availableTime[j] %></span></label>
+                      </p>
+                      <% } %>
+               </div>
+            </div>
+            <hr>
+            <div class="fsec travel available-price">
+                <label for="price">Price(Incl. GST)</label>
+                <span>RS. <%= flight[i].price %> /-</span>
+            </div>
+            <div class="fsec fbtn">
+                    <!-- Hidden input to store the MongoDB Object ID -->
+                    <input type="hidden" name="flightId" value="<%= flight[i]._id %>">
+                    <button type="submit">Book Ticket</button>
+            </div>
+            </form>
+        <!-- end form -->
+       </div>
+   
+</div>    
+</div>  
+<!-- end trip1 -->
+<% } %>
+
+
+</div>

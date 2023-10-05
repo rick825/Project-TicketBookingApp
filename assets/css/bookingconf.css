@@ -1,0 +1,257 @@
+*{
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    width: 100%;
+    font-family:'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+
+/* header */
+#header{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.navbar{
+    display: none;
+}
+
+.header{
+  width: 100%;
+  padding: 0rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .navlist{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.logo h2{
+    font-size: 4rem;
+}
+
+.nav .navlist .navitem{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+.nav .profile,.nav .navtrip{
+    margin-top: 0.1rem;   
+}
+
+.nav .profile:hover,.nav .navtrip:hover{
+    transform: scale(110%);
+}
+
+.nav .profile img,.nav .navtrip img{
+
+}
+
+.nav .profile p,.nav .navtrip p{
+    margin-left: 0.45rem;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav .profile img{
+    margin-top: 0.1rem;
+
+}
+
+.nav .navtrip img{
+    margin-top: -0.1rem;
+}
+
+.navlist  img{
+    width: 25px;
+}
+
+
+.nav a{
+    border-radius: 6px;
+    padding: 0.8rem 1.8rem;
+    transition: 0.2s ease;
+}
+
+.nav .signup:hover,.nav .login:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+.navlist{
+    display: flex;
+    align-items: center;
+}
+
+.navitem a{
+    color: black;
+}
+
+.nav .signup{
+    border: 2px solid;
+border-color: rgb(13, 161, 87);
+color: black;
+}
+
+.nav .login{
+    background-color: rgb(13, 161, 87);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+
+
+
+/* end header */
+
+.bookconf{
+    width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-conf{
+    width: 100rem;
+    height: 58rem;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 5rem;
+    font-family: 'Helvetica Neue', Helvetica,Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+}
+
+.booking-conf .b-head{
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.booking-conf .binfo{
+    border-bottom: 2px solid black;
+}
+
+.booking-conf .binfo .flightname{
+    display: flex;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.booking-conf .binfo .flightname img{
+    width: 60px;
+}
+
+.booking-conf .binfo .flightname p{
+    margin-left: 1.2rem;
+}
+
+
+.booking-conf .binfo .userinfo{
+    display: flex;
+    margin-left: 7rem;
+    /* justify-content: space-between; */
+    margin-top: -2rem;
+    font-size: 1.5rem;
+    padding: 0rem 0.1rem;
+    color:rgba(60, 61, 61, 0.926);
+}
+
+.booking-conf .binfo .userinfo .btotaltravellers{
+    margin-left: 4rem;
+}
+
+
+.booking-conf .ftinfo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:rgba(60, 61, 61, 0.926);
+}
+
+.booking-conf .ftinfo h2{
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+.booking-conf .ftinfo p{
+    margin-top: -0.7rem;
+    color: black;
+}
+
+.booking-conf .payinfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-conf .payinfo .payable .pay{
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    color:rgba(60, 61, 61, 0.926);
+}
+
+.booking-conf .payinfo .payable .gtotal{
+    color: black;
+    font-size: 1.4rem;
+}
+
+.booking-conf .bconf{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    float: right;
+}
+
+.booking-conf .bbtn{
+    display: flex;
+    flex-direction: row;
+}
+
+.booking-conf .bconf .btn{
+    margin-left: 1rem;
+    padding: 1rem;
+    border: none;
+    background-color:  rgb(13, 161, 87);
+    cursor: pointer;
+    transition: 0.1s ease;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.booking-conf .bconf  .canbtn{
+    background-color:#c82222;
+}
+
+.booking-conf .bconf .btn:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+

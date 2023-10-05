@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family:'Poppins', sans-serif;
+}
+
+
+
+/* header */
+#header{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.navbar{
+    display: none;
+}
+
+.header{
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .navlist{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.logo h2{
+    font-size: 4rem;
+}
+
+.nav .navlist .navitem{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+.nav .profile,.nav .navtrip{
+    margin-top: 0.1rem;   
+}
+
+.nav .profile:hover,.nav .navtrip:hover{
+    transform: scale(110%);
+}
+
+.nav .profile img,.nav .navtrip img{
+
+}
+
+.nav .profile p,.nav .navtrip p{
+    margin-left: 0.45rem;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav .profile img{
+    margin-top: 0.1rem;
+
+}
+
+.nav .navtrip img{
+    margin-top: -0.1rem;
+}
+
+.navlist  img{
+    width: 25px;
+}
+
+
+.nav a{
+    border-radius: 6px;
+    padding: 0.8rem 1.8rem;
+    transition: 0.2s ease;
+}
+
+.nav .signup:hover,.nav .login:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+.navlist{
+    display: flex;
+    align-items: center;
+}
+
+.navitem a{
+    color: black;
+}
+
+.nav .signup{
+    border: 2px solid;
+border-color: rgb(13, 161, 87);
+color: black;
+}
+
+.nav .login{
+    background-color: rgb(13, 161, 87);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+
+
+
+/* end header */
+
+/* main section */
+#main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    position: relative;
+    width: 80%;
+    height: 55rem;
+}
+
+.sec{
+    border-radius: 1rem;
+}
+
+.sectop{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/main.jpg');
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.sectop:before{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right:0;
+    left:0;
+    background-color: black;
+    opacity: 0.6;
+    border-radius: 1rem;
+}
+
+.secbot{
+    position: absolute;
+    top:88%;
+    left:10%;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 12rem;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* sectop section */
+.sectop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family:'Poppins', sans-serif;
+    font-size: 5rem;
+    /* text-shadow: 2px 2px black; */
+    padding: 2rem;
+}
+
+.sectop p{
+    width: 50%;
+    z-index: 1000;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 2px;
+    margin-top: -4rem;
+    /* text-transform: uppercase; */
+}
+
+/* end sectop section */
+
+
+/* secbot section */
+.booking-info{
+    width: 100%;
+    position:relative ;
+}
+
+.booking-info form,.booking-info .info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+
+.booking-info .fimg img{
+    width: 50px;
+    margin-top: 1rem;
+}
+
+.booking-info .fsec{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-top: -2rem;
+}
+
+.booking-info .date{
+ margin-top: 1rem;
+}
+
+.booking-info .fsec label{
+    color: #2f2d2de8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.booking-info input,.booking-info select{
+    border-radius: 5px;
+}
+
+.booking-info .fsec input{
+    cursor: pointer;
+}
+
+.booking-info .travel input{
+    width: 5rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: 0px solid black;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.booking-info select,.booking-info .date input{
+    padding: 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border: 0px solid black;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.booking-info .fbtn button{
+  padding: 1.2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  background-color: rgb(13, 161, 87);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.booking-info .fbtn button:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.booking-info hr{
+    width: 8rem;
+   background-color: black;
+   transform: rotate(90deg);
+   /* margin-top: 1rem; */
+   margin-left: -1rem;
+}
+
+
+
+/* end secbot section */
+/* end main section */
+
+
+
+/* profile */
+#profile-main{
+    position: relative;
+}
+
+.profile-main{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    padding: 6rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.profile-main .profile-pic img{
+    filter: drop-shadow(5px 5px 8px black);
+}
+
+.profile-main .profile-c{
+    font-family:'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+.profile-main .profile-c p{
+    margin-top: 1.5rem;
+}
+/* end profile */
+
+
+/* my trips */
+#mytrips{
+  width: 100%;
+  position: relative;
+}
+
+.mytrips{
+position: relative;
+width: 100%;
+padding: 2rem;
+}
+
+.mytrips h1{
+    font-size: 3rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+.mytrips .mytriphead h1{
+    font-weight: 200;
+    font-family:'Poppins', sans-serif;
+}
+
+.trips{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.trip{
+    width: 60%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* trip info */
+.trip .tripinfo {
+    display: flex;
+   align-items: center;
+   font-size: 1.4rem;
+}
+
+.trip .tripinfo .tripi{
+    margin-left: 1.5rem;
+}
+
+.trip .tripinfo .trip-number,.trip .tripinfo .trip-for{
+    margin-left: 2.9rem;
+}
+
+.trip .tripinfo img{
+    width: 45px;   
+}
+
+.trip .tripinfo .trip-number{
+    letter-spacing: 0.5px;
+}
+
+.trip .tripinfo .tripf{
+    letter-spacing: 0.5px;
+}
+
+.trip .tripinfo .tripn{
+    letter-spacing: 0.5px;
+    margin-top: 0.2rem; 
+}
+
+.trip .tripinfo .trip-for{
+    text-transform: uppercase;
+}
+
+
+.trip .booking-info .date{
+    margin-top: -2rem;
+}
+
+/* end trip info */
+
+/* booking info for booking page*/
+.trip .booking-info .city{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.booking-info .city p{
+   font-size: 1.25rem;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+
+.trip .booking-info .travel p,.trip .booking-info .date p{
+    font-size: 1.25rem;
+ margin-top: 1rem;
+ padding: 0.5rem 0.8rem;
+ border-radius: 5px;
+ letter-spacing: 0.5px;
+ cursor: pointer;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.trip .booking-info .date p{
+    box-shadow: none;
+}
+
+.available-flight .travellers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* end booking info for booking page* */
+
+/* available flights */
+.available{
+    width: 80%;
+    margin: 1rem;
+    z-index: 1;
+}
+
+
+
+.available-flight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.available-flight .avil-tim{
+    display: flex;
+    align-items: center;
+}
+
+.available-flight .avil-tim{
+    padding: 0.4rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.available-flight .avail-company{
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+
+.available .available-price{
+    margin-left: -2rem;
+}
+
+.available-flight .fbtn button{
+    margin-top: -2rem;
+}
+
+ .available-price span{
+    display: inline-block;
+    padding: 6px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+}
+
+#id_avail-time input[type="radio"] {
+    display: none;
+  }
+  
+  #id_avail-time span {
+    display: inline-block;
+    padding: 6px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+  }
+  
+  #id_avail-time input[type="radio"]:checked + span {
+    background-color: gold;
+    color: black;
+  }
+/* end available flights */
+
+/* end my trips */
+
+
+
+/* footer */
+#footer{
+    width: 100%;
+    height: 100%;
+    margin-top: 6.8rem;
+}
+
+.footer{
+    width: 100%;
+    height: 8rem;
+    color: black;   
+    display: flex;
+    justify-content: space-between;  
+    padding: 2rem;  
+}
+
+.footsec{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.footright{
+    position: relative;
+}
+
+.footright h2{
+ margin-right: 1rem;
+ font-size: 1rem;
+}
+
+.footright ul{
+    list-style: none;
+    display: flex;
+}
+
+.footright ul img{
+    width: 25px;
+}
+
+
+@media only screen and  (max-width: 750px) {
+    .secbot{
+     width: 100%;
+     height: 50rem;
+    }
+
+
+ 
+ }
+
+/* end footer */

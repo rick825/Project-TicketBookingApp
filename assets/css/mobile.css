@@ -1,0 +1,88 @@
+@media only screen and  (max-width: 750px) {
+
+   .main{
+   height: 80rem;
+  }
+
+  .backblack{
+    width: 60%;
+    height: 100rem;
+    position: fixed;
+    top:0;
+    /* left:0; */
+    right:0;
+    bottom: 0;
+    background-color: white;
+    z-index: 10000;
+    opacity: 1;
+  }
+
+  .navbar{
+    display: flex;
+  }
+
+  .navbar img{
+    z-index: 100000;
+    position: fixed;
+    top:2%;
+    right: 5%;
+  }
+
+     /* nav bar */
+     .nav .navlist{
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 10%;
+        right: 10%;
+        z-index: 100000;
+     }
+
+     .nav .navlist .navitem{
+        margin-right: 0;
+        margin-top: 1rem;
+     }
+
+   
+
+    /* .nav .signup,.nav .profile p,.nav .navtrip p{
+        color: white;
+    } */
+
+
+
+    /* end nav bar */
+
+  .sectop{
+   background-image: url('/img/main2.jpg');
+  }
+  
+   .secbot{
+    width: 88%;
+    min-height: 55rem;
+   left:6%;
+   top:25%;
+   }
+
+   .booking-form form{
+       flex-direction: column;
+   }
+
+   .booking-form form .fimg img{
+       transform: rotate(90deg);
+   }
+
+   .booking-form form hr{
+       transform: rotate(0);
+   }
+   
+   #footer{
+       position: relative;
+   }
+    
+   .footer{
+       height: 100%;
+   }
+
+   
+}

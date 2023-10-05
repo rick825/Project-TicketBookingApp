@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ticket</title>
+    <link rel="stylesheet" href="/css/bookingconf.css">
+</head>
+<body>
+    <div class="bookconf">
+        <div class="popup confirmation">
+            <div class="booking-conf">
+       
+                <div class="b-head">  
+                 <p>Your Booking Is Confirmed</p>
+                </div>
+                
+                <div class="b-main">
+            
+                    <div class="ufinfo binfo">
+                        <div class="flightname">
+                            <img src="/icon/flight.png" alt="">
+                           <p><%= trip.airline %></p>
+                        </div>
+                        <div class="userinfo">
+                            <p>Trip For: <%= trip.travelername %></p>
+                            <p class="btotaltravellers">Total Travellers: <%= trip.travelers %></p>
+                            <p class="traveldate btotaltravellers">Travel On: <%= trip.departuredate  %> <%= trip.departuretime %></p>
+                        </div>
+                    </div>
+                     
+                    <div class="ftinfo binfo">
+                        <div class="bfrom">
+                            <h2>FROM</h2>
+                            <p><%= trip.departurecity %></p>
+                        </div>   
+                         <div class="bft">
+                            <img src="/img/transfer.png" alt="">
+                         </div>
+                        <div class="b-to">
+                            <h2>TO</h2>
+                            <p><%= trip.arivalcity %></p>
+                        </div>
+                    </div>
+            
+                    <div class="payinfo binfo">
+                        <div class="payhead">
+                            <h2>Total Payable</h2>
+                        </div>
+                        <div class="payable">
+                            <div class="mpay pay">
+                              <p>₹<%= trip.ticketPrice %> × <%= trip.travellers %> Travellers</p>
+                              <p>₹<%= trip.bookingPrice %>/-</p>
+                            </div>
+                            <div class="tpay pay">
+                                <p>All Applicable Taxes</p>
+                                <p>₹<%= trip.bookingtax %>/-</p>
+                            </div>
+                            <div class="gtotal pay">
+                                <h2><b>Grand Total</b></h2>
+                                <h2><b>₹<%= trip.BookingFinalPrice %>/-</b></h2>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="bconf">
+                        <div class="bbtn fbtn">
+                        <button class="canbtn btn">Cancel Ticket</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+     </div>    
+</body>
+</html>

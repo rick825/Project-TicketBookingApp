@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+</head>
+<body>
+
+    <div class="backblack"></div>
+    <div class="navbar">
+        <img src="/icon/nav.png" alt="">
+    </div>
+    <%-include('templates/_homeHeader')%>
+
+    <section id="profile-main">
+        <div class="profile-main">
+           <div class="profile-pic">
+              <img src="/icon/profilepic.png" alt="">
+           </div>
+            <div class="profile-cont">
+                <div class="profile-c">
+                   <p><%-user.name%></p>
+                   <p>Email: <%-user.email%></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <%-include('templates/_trips') %>
+    
+</body>
+</html>
