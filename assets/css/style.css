@@ -459,6 +459,15 @@ padding: 2rem;
     z-index: 1;
 }
 
+.noflights{
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
 
 
 .available-flight{

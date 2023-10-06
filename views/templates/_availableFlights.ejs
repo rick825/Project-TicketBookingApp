@@ -1,4 +1,11 @@
 <div class="available-flight">
+
+    <% if(flight.length == 0) { %>
+         
+        <div class="noflights">
+      <p>No Flights Available on this date😯, <br>Please select another date.</p>
+    </div>
+    <%}else{%>    
   <!-- trip 1 -->
   <% for(var i =0; i < flight.length; i++){ %>
   <div class="trip available">
@@ -80,6 +87,7 @@
 </div>    
 </div>  
 <!-- end trip1 -->
+<% } %>
 <% } %>
 
 
